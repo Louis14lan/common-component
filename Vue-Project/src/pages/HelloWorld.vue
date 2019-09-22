@@ -1,7 +1,8 @@
 <template>
-  <div class="hello">
+  <div class="flex-column">
     <h1>{{ msg }}</h1>
     <button @click="()=>{$router.push('pageIndicator')}">进入页码组件示例页面</button>
+    <button @click="()=>{$router.push('LifecycleExample')}">进入生命周期函数演示页面</button>
   </div>
 </template>
 
@@ -18,18 +19,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  button{
+    margin: 10px;
+  }
 </style>
